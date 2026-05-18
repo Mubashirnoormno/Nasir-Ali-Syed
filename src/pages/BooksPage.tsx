@@ -196,7 +196,7 @@ export function BooksPage() {
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.95, y: 20 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-bg-paper max-w-4xl w-full rounded-none shadow-2xl overflow-hidden border border-brand-primary/10 relative"
+                className="bg-bg-paper max-w-4xl w-full rounded-none shadow-2xl overflow-hidden border border-brand-primary/10 relative max-h-[90vh] md:max-h-none overflow-y-auto md:overflow-visible"
               >
                 {/* Close Button */}
                 <button 

@@ -6,8 +6,15 @@
 import { motion } from "motion/react";
 import { Book, books } from "../data";
 import { ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function BooksSection() {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/books");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <section id="books" className="py-32 bg-bg-paper relative">
       <div className="container mx-auto px-6">
@@ -23,8 +30,9 @@ export function BooksSection() {
             <p className="text-brand-primary/40 font-serif text-lg md:text-xl italic">"A curated collection of published scholarly works."</p>
           </div>
           <motion.button 
+            onClick={handleNavigate}
             whileHover={{ x: 10 }}
-            className="flex items-center gap-3 text-brand-accent font-sans text-[10px] tracking-[0.3em] uppercase group"
+            className="flex items-center gap-3 text-brand-accent font-sans text-[10px] tracking-[0.3em] uppercase group cursor-pointer"
           >
             Full Catalog <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </motion.button>
@@ -35,6 +43,7 @@ export function BooksSection() {
           {books.map((book, idx) => (
             <motion.div
               key={idx}
+              onClick={handleNavigate}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

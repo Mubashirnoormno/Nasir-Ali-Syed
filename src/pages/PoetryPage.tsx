@@ -238,7 +238,7 @@ export function PoetryPage() {
                       </div>
 
                       {/* English translation panel */}
-                      <div className="max-w-xl mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-500 pt-4">
+                      <div className="max-w-xl mx-auto opacity-70 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pt-4">
                         <p className="text-xs font-serif italic text-brand-primary/50 tracking-wider leading-relaxed">
                           "{couplet.english}"
                         </p>

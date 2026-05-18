@@ -6,8 +6,15 @@
 import { motion } from "motion/react";
 import { sampleGhazals } from "../data";
 import { Quote, Heart, Share2, Play } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function PoetrySection() {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/poetry");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   const ghazal = sampleGhazals[0];
 
   return (
@@ -103,7 +110,7 @@ export function PoetrySection() {
         </motion.div>
 
         <div className="mt-20 text-center">
-           <button className="group relative px-10 py-4 border border-brand-primary/10 text-brand-primary text-xs font-sans tracking-[0.4em] uppercase transition-all hover:bg-brand-primary hover:text-white">
+           <button onClick={handleNavigate} className="group relative px-10 py-4 border border-brand-primary/10 text-brand-primary text-xs font-sans tracking-[0.4em] uppercase transition-all hover:bg-brand-primary hover:text-white cursor-pointer">
               Explore Poetry Archive
               <div className="absolute bottom-0 left-0 h-[2px] bg-brand-accent w-0 group-hover:w-full transition-all duration-500" />
            </button>
