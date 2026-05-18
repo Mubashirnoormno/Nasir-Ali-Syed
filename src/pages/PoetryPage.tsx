@@ -237,12 +237,7 @@ export function PoetryPage() {
                         </p>
                       </div>
 
-                      {/* English translation panel */}
-                      <div className="max-w-xl mx-auto opacity-70 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pt-4">
-                        <p className="text-xs font-serif italic text-brand-primary/50 tracking-wider leading-relaxed">
-                          "{couplet.english}"
-                        </p>
-                      </div>
+
 
                       {/* Mini Divider dots */}
                       {cIdx < activeGhazal.couplets.length - 1 && (
