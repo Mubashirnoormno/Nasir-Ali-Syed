@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Gulzar&family=Inter:wght@100..900&family=Noto+Nastaliq+Urdu:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cinzel:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-urdu: "Amiri", serif;
+  --font-urdu-header: "Noto Nastaliq Urdu", "Gulzar", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-editorial: "Cormorant Garamond", serif;
+  
+  --color-brand-primary: #3D1C0B; /* Deep Mahogany Dark Brown */
+  --color-brand-accent: #B45309; /* Warm Amber Gold */
+  --color-bg-paper: #FCFAF7; /* Elegant Warm Ivory Parchment */
+  --color-bg-paper-dark: #FAF4E9; /* Rich Cream Beige Parchment */
+  --color-ink: #2C140A; /* Deep Charcoal Espresso Ink */
+}
+
+@layer base {
+  body {
+    @apply bg-bg-paper text-ink font-sans antialiased selection:bg-brand-primary/10 selection:text-brand-primary;
+  }
+}
+
+.nastaliq {
+  font-family: "Noto Nastaliq Urdu", "Gulzar", serif;
+  line-height: 2.2;
+}
+
+.urdu-text {
+  font-family: "Amiri", serif;
+  line-height: 1.8;
+}
+
+.urdu-header {
+  font-family: "Noto Nastaliq Urdu", "Gulzar", serif;
+  line-height: 2.0;
+}
+
+.urdu-body {
+  font-family: "Amiri", serif;
+  line-height: 2.2;
+}
+
+.cinzel {
+  font-family: "Cinzel", serif;
+}
+
+.editorial {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.bg-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-paper-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-primary/20 rounded-full hover:bg-brand-primary/40;
+}
